@@ -669,36 +669,11 @@ express()
   
    .get("/allvidsurl/:id", function(req,res) {
 	   
-	 	requestTitle(0);
-	  
-	  function requestTitle(keyIndex) {
-		  
-		  request("https://www.googleapis.com/youtube/v3/videos?id=" + req.params.id + "&key=" + keyArr[keyIndex%12] + "&part=snippet", function(err, response, body){
-			  
-			  var json_body = JSON.parse(body);
-			  if(json_body.error && keyIndex!= 11 ) {
-				  return requestTitle(keyIndex + 1);				  
-			  }
-			 
-			 var title;
-			 try {
-					title = JSON.parse(body).items[0].snippet.title; 
-					title = tr.slugify(title);
-				
-			 } catch(err) {
-							title = crypto.randomBytes(12).toString('hex');
-						  }
-						  
-			let id = req.params.id;
-			var filestream = youtubedl('http://www.youtube.com/watch?v='+id, ['--ignore-errors','--force-ipv4','-g']);
-			  filestream.on('info', function(info){
-				  res.json(info);
-			  });
-			 
-		  });
-	  
-	 }
-			
+	let id = req.params.id;
+	var filestream = youtubedl('http://www.youtube.com/watch?v='+id, ['--ignore-errors','--force-ipv4','-g']);
+	filestream.on('info', function(info){
+		res.json(info.url);
+	});				
    })
   
 
