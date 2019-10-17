@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "preinstall": "npm install pm2",
-    "start": "pm2-runtime ./bin/www -i max"
+    "start": "pm2-runtime index.js -i max"
   },
   "dependencies": {
     "body-parser": "~1.15.2",
