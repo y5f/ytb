@@ -19,18 +19,7 @@ const https = require('https');
 // keys  to youtube v3/videos
 const keyArr = [
 
-    "AIzaSyDhtDMjNxjl_Jmjxw8db7ZGnaL1KOjtv34",
-    "AIzaSyAaVxe2e6AbU3FD2pKTQh1_AySRHC1NY8I",
-    "AIzaSyDM42M_KmFEhN2WFfxcOLhJ86YTIpgA7LQ",
-    "AIzaSyDoS_qhQR97ByR0LuQ2lldJDV_D1d_o0Gk",
-    "AIzaSyCq1_7w-7R6MfyNXtWiBIPGgt6KcbXnz_g",
-    "AIzaSyC7aYwBE5SKgfxtULedECsvWS1XUnVxt0s",
-    "AIzaSyA0aF76NYjOPYoWRAEAyR0hILhuwJX02yg",
-    "AIzaSyCYmjZq41rF116rjklxGxtCodu-V-ofHHE",
-    "AIzaSyBh_JlpZ8qsVTt8tKZtBOo4xIxDuaBMNxA",
-    "AIzaSyA2RKf0KgwmbeReYByRgoIL6nPqFF4QW7U",
-    "AIzaSyDQ6qEKx_bdDtG9XvZ5Rlx9eQKShf7rCGo",
-    "AIzaSyD-jMHm5u3tDrP8c0OmQngX0fxiD3tqS2w"];
+    ];
 	
 
 
