@@ -1,0 +1,62 @@
+doctype html
+html(ng-app='turboMP3')
+  head
+      title
+      meta(charset='UTF-8')
+      meta(http-equiv='X-UA-Compatible', content='IE=edge')
+      meta(name='viewport', content='width=device-width', initial-scale='1', minimum-scale='1')
+      link(rel='stylesheet', href='https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.css')
+      link(rel='stylesheet', href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css')
+      link(rel='stylesheet', href='https://fonts.googleapis.com/icon?family=Material+Icons')
+      link(rel='stylesheet', href='stylesheets/style.css')
+      link(rel='stylesheet', href='stylesheets/jquery.range.css')
+      script(src='http://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.2/modernizr.js')
+
+
+  body
+    .se-pre-con
+    .container
+        .row
+          #navMenu.navbar-fixed-top.col-lg-6.col-lg-offset-3.col-md-6.col-md-offset-3.col-sm-12
+            form(role='search')
+              .input-group.col-lg-12
+                input#search.form-control(type='text', placeholder='Search for your favorite songs', autocomplete='off')
+                .input-group-btn
+                  button.btn(type='submit', ng-click='showPadding()', style='color:black')
+                    span.glyphicon.glyphicon-search
+        #godown.godown
+        .row
+          .col-md-6.col-md-offset-3
+            .panel(style='text-align:center;padding:0px;height:255px;')
+              div(style='max-width:470px;height:160px;margin:10px auto;')
+                p(style='background:#5bc0de;padding:2px;font-size:15px;') Use "regular download" button to download
+                p(style='background:#5bc0de;padding:2px;font-size:15px;margin-top:6px;') Use "regular download" button to download
+            #results
+        //.row
+          #reader.vertical-align.navbar-fixed-bottom.col-lg-6.col-lg-offset-3.col-md-6.col-md-offset-3.col-sm-12(style='background-color:#F9F9F9;')
+            .input-group.col-lg-12
+              .col-xs-1(style='padding:0;')
+                img#play.img-responsive(src='images/play_b.png')
+                // i#play.material-icons(style="color:#D8003B") play_circle_filled
+              .col-xs-6
+                input#progress-bar(type='range', value='0.0')
+              .col-xs-1(style='padding:0;')
+                img#mute-toggle.img-responsive(src='images/volume_b.png')
+                // i#mute-toggle.material-icons(style="color:#D8003B") volume_down
+              .col-xs-4
+                input#volume-input(type='range', max='100', min='0')
+    script(type='text/javascript', src='https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js')
+    script(type='text/javascript', src='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js')
+    script(type='text/javascript', src='https://ajax.googleapis.com/ajax/libs/angularjs/1.6.1/angular.min.js')
+    script(src='http://code.jquery.com/ui/1.12.1/jquery-ui.min.js', integrity='sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU=', crossorigin='anonymous')
+    script(src='javascripts/jquery.range.js')
+    script(src='https://www.youtube.com/iframe_api')
+    script(type='text/javascript', src='javascripts/script.js')
+    script(type='text/javascript', src='javascripts/tplApp.js')
+    script(src='https://apis.google.com/js/client.js?onload=init')
+    script(type='text/javascript', src='javascripts/app.js')
+    script.
+        $(window).on('load', function () {
+
+          $(".se-pre-con").fadeOut("slow");
+        });

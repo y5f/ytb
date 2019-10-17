@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html ng-app="turboMP3">
+  <head>
+    <title></title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width" initial-scale="1" minimum-scale="1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="stylesheets/style.css">
+    <link rel="stylesheet" href="stylesheets/jquery.range.css">
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.2/modernizr.js"></script>
+  </head>
+  <body>
+    <div class="se-pre-con"></div>
+    <div class="container">
+      <div class="row">
+        <div id="navMenu" class="navbar-fixed-top col-lg-6 col-lg-offset-3 col-md-6 col-md-offset-3 col-sm-12"><img src="images/header.png" class="img-responsive">
+          <form role="search">
+            <div class="input-group col-lg-12">
+              <input id="search" type="text" placeholder="Search for your favorite songs" autocomplete="off" class="form-control ui-autocomplete-input">
+              <div class="input-group-btn">
+                <button type="submit" ng-click="showPadding()" style="color:black" class="btn"><span class="glyphicon glyphicon-search"></span></button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+      <div id="godown" class="godown"></div>
+      <div class="row">
+        <div class="col-md-6 col-md-offset-3">
+          <div style="text-align:center;padding:0px;height:255px;" class="panel">
+            <div style="max-width:470px;height:160px;margin:10px auto;">
+              <p style="background:#5bc0de;padding:2px;font-size:15px;">Use "regular download" button to download</p>
+              <p style="background:#5bc0de;padding:2px;font-size:15px;margin-top:6px;">Use "regular download" button to download</p>
+            </div>
+          </div>
+          <div id="results"></div>
+        </div>
+      </div>
+      <div class="row">
+        <div id="reader" style="background-color:#F9F9F9;" class="vertical-align navbar-fixed-bottom col-lg-6 col-lg-offset-3 col-md-6 col-md-offset-3 col-sm-12">
+          <div class="input-group col-lg-12">
+            <div style="padding:0;" class="col-xs-1"><img id="play" src="images/play_b.png" class="img-responsive">
+              <!-- i#play.material-icons(style="color:#D8003B") play_circle_filled-->
+            </div>
+            <div class="col-xs-6">
+              <input id="progress-bar" type="range" value="0.0">
+            </div>
+            <div style="padding:0;" class="col-xs-1"><img id="mute-toggle" src="images/volume_b.png" class="img-responsive">
+              <!-- i#mute-toggle.material-icons(style="color:#D8003B") volume_down-->
+            </div>
+            <div class="col-xs-4">
+              <input id="volume-input" type="range" max="100" min="0">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.1/angular.min.js"></script>
+    <script src="http://code.jquery.com/ui/1.12.1/jquery-ui.min.js" integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU=" crossorigin="anonymous"></script>
+    <script src="javascripts/jquery.range.js"></script>
+    <script src="https://www.youtube.com/iframe_api"></script>
+    <script type="text/javascript" src="javascripts/script.js"></script>
+    <script type="text/javascript" src="javascripts/tplApp.js"></script>
+    <script src="https://apis.google.com/js/client.js?onload=init"></script>
+    <script type="text/javascript" src="javascripts/app.js"></script>
+    <script>
+      $(window).on('load', function () {
+        $(".se-pre-con").fadeOut("slow");
+      });
+    </script>
+  </body>
+</html>
