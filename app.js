@@ -25,27 +25,6 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 
 
-process.on('uncaughtException', function(err) {
-  console.log(JSON.stringify(process.memoryUsage()));
-  console.error("An uncaughtException was found, the program will end. " + err + ", stacktrace: " + err.stack);
-  return process.exit(1);
-});
-
-
-process.nextTick(function() {
-  throw new Error("Some Bad Error");
-});
-
-
-process.on('unhandledRejection', (reason, promise) => {
-  console.log('Unhandled Rejection at:', reason.stack || reason)
-  // Recommended: send the information to sentry.io
-  // or whatever crash reporting service you use
-})
-
-
-
-
 app.use('/', index);
 app.use('/users', users);
 
