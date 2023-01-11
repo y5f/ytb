@@ -10,7 +10,7 @@
     "body-parser": "~1.15.2",
     "cheerio": "^1.0.0-rc.2",
     "cookie-parser": "~1.4.3",
-    "debug": "~2.2.0",
+    "debug": "~3.1.0",
     "ejs": "^2.5.6",
     "express": "~4.14.0",
     "fluent-ffmpeg": "^2.1.2",
